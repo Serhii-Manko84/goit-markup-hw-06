@@ -548,7 +548,8 @@ background: rgba(47, 48, 58, 0.8);
 }
 
 
-.cleint-mail { 
+.cleint-mail {
+   display: block;
     margin-left: 93px; 
 }
 
@@ -578,20 +579,43 @@ background: rgba(47, 48, 58, 0.8);
     align-items: center;
 }
 
-.social-mail {
-    width: 358px;
-    height: 50px;
-    font-size: 16px;
-    line-height: 1.25;
+.client-mail-name {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    color: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 16px;
 }
+
+.social-mail-name {
+width: 358px;
+height: 50px;
+left: 815px;
+top: 2784px;
+font-size: 16px;
+line-height: 1.25;
+padding: 15px;
+color: rgba(255, 255, 255, 0.6);
+background-color: #2F303A;
+border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+}
+
+.social-mail-name:active {
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .cursor-out {
     display: flex;
@@ -609,17 +633,18 @@ background: rgba(47, 48, 58, 0.8);
     width: 200px;
     border: none;
     margin-left: 12px;
+    cursor: pointer;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-mail-icon-out { 
-    padding-left: 10px;
+    margin-left: 10px;
     fill: var(--brand-color-three);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.cursor-out:focus,
+/* .cursor-out:focus,
 .cursor-out:hover {
     background: deepskyblue;
 }
@@ -627,7 +652,7 @@ background: rgba(47, 48, 58, 0.8);
 .cursor-out:hover .social-mail-icon-out,
 .cursor-out:focus .social-mail-icon-out {
         fill: var(--brand-color);
-}
+} */
 
 
 /*================Стилі для портфоліє=================*/
@@ -786,6 +811,7 @@ color: var(--brand-tekst-color);
     border-radius: 50%;
     background-color: var(--brand-color-three);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
@@ -817,8 +843,11 @@ margin-bottom: 12px;
 .modal-form {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
 }
+.modal-form-field {
+    margin-bottom: 10px;
+}
+
 
 .modal-form-field-desc {
     display: block;
@@ -836,6 +865,10 @@ margin-bottom: 12px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:active {
+    border: 1px solid var(--brand-color);
 }
 
 .modal-form-input:focus {
@@ -874,6 +907,7 @@ margin-bottom: 12px;
     resize: none;
     width: 100%;
     height: 120px;
+    padding: 12px 16px;
     color: rgba(117, 117, 117, 0.5);;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -923,7 +957,9 @@ border: none;
 .modal-form-check-wrapper {
     font-size: 14px;
     line-height: 1.71;
+    text-align: center;
     color: var(--brand-tekst-color);
+    margin-top: 10px;
 }
 
 .modal-form-text {
@@ -931,6 +967,7 @@ border: none;
     line-height: 1.71;
     color: var(--brand-color);
     text-decoration: underline;
+    
 }
 
 .modal-form-btn {
@@ -939,6 +976,8 @@ align-self: center;
 width: 200px;
 height: 50px;
 left: 700px;
+padding: 0px;
+margin-top: 30px;
 color: var(--brand-color-three);
 background: #188CE8;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
